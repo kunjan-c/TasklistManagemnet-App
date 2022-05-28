@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from "react-router-dom";
+import LogIn from "./pages/LogIn";
+import LogoImg from "./Component/UI/Logo/LogoImg";
+import CreateTaskForm from "./pages/CreateTask";
+import TaskList from "./pages/TaskList";
+import ProtectedRoute from "./ProtectedRoute";
+import JokesSpot from "./pages/JokesSpot";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <LogoImg></LogoImg>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />}></Route>
+        <Route path="/login" element={<LogIn />}></Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/viewTasks" element={<TaskList />} />
+        </Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/jokesSpot" element={<JokesSpot />} />
+        </Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/editTask" element={<CreateTaskForm />} />
+        </Route>
+      </Routes>
+    </Fragment>
   );
 }
 

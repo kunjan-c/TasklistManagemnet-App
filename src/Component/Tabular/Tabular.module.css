@@ -1,0 +1,41 @@
+.header {
+  margin: 0px;
+  width: 100%;
+  height: 5rem;
+  margin-top: -60px;
+  display: flex;
+  justify-content: right;
+}
+
+.header nav {
+  height: 100%;
+  padding-right: 70px;
+}
+
+.header ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header li {
+  margin: 0 2rem;
+}
+
+.header a {
+  color: rgb(19, 17, 17);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: #0e0f0f;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #95bcf0;
+}

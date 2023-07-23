@@ -6,7 +6,7 @@ import TaskList from "./pages/TaskList";
 import ProtectedRoute from "./ProtectedRoute";
 import JokesSpot from "./pages/JokesSpot";
 import { Fragment } from "react";
-
+import "./app.css"
 function App() {
   return (
     <Fragment>

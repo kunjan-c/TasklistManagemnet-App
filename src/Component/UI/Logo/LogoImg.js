@@ -1,9 +1,10 @@
 import React from "react";
-import MobileFirstLogo from "../../../Assets/MobileFitrst_Logo.png";
+import MobileFirstLogo from "../../../Assets/dummyLOgo.png";
+
 export default function LogoImg() {
   return (
     <div>
-      <img src={MobileFirstLogo} alt="MobileFirst-Logo"></img>
+      <img className="logo-img" src={MobileFirstLogo} alt="MobileFirst-Logo"></img>
     </div>
   );
 }
